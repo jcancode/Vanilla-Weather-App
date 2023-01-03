@@ -5,18 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WeatherApp</title>
-    <link rel="stylesheet" href="src/styles.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="src/styles.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
   </head>
-  <body>
+  <body id="bodystyle">
     <div class="container">
-      <div class="card border-info mb-3" id="card">
+      <div class="card border-info mb-3" style="max-width: 750px">
         <div class="card-body">
           <h1>
             <form id="search-form">
@@ -29,18 +29,11 @@
                     id="search-input"
                   />
                   <button
-                    class="btn btn-outline-light"
+                    class="btn btn-outline-info"
                     type="button"
                     id="button-addon2"
                   >
                     🔍 Search
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-primary"
-                    id="location-button"
-                  >
-                    Current Location
                   </button>
                 </div>
               </div>
@@ -51,14 +44,18 @@
               <div class="col-10" style="font-weight: bold">
                 Current Temperature
               </div>
-              <div class="col-2" style="font-weight: bold">City</div>
-              <div class="col-9" id="unit">☀️ 22°C|°F</div>
+              <div class="col-2" style="font-weight: bold" id="cty">City</div>
+              <br />
+              <br />
+              <div class="col-9" id="unit">
+                <strong>22</strong>
+                <span class="degree">°C|°F</span>
+              </div>
               <div class="col-3" id="city">Atlanta,GA</div>
-              <div class="col-9">Sunny</div>
-              <div class="col-3" id="dayTime">Friday 3:00pm</div>
+              <div class="col-9" id="weather-icon">Sunny</div>
+              <div id="dayTime">Friday 3:00pm</div>
             </div>
           </h2>
-          <br />
           <br />
           <div class="row" id="info">
             <div class="col-2">
@@ -106,15 +103,12 @@
               <br />
               <span class="low">52°F</span>
             </div>
-            <div class="col-2" id="icon">
-              <img src="media/icon.png" class="img-fluid" />
-            </div>
           </div>
         </div>
       </div>
     </div>
     <h6>
-      See the code for this app on
+      Coded by Jessica Gonzalez. Get the code for this app on
       <span class="badge rounded-pill text-bg-light" id="gitLink">
         <a href="https://github.com/jcancode/SheCodesPlus-WeatherApp/tree/main"
           >GitHub</a

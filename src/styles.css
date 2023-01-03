@@ -1,7 +1,3 @@
-body {
-  border-width: 18px;
-  border-radius: 18px;
-}
 h1 {
   font-family: monospace;
   font-size: medium;
@@ -9,9 +5,38 @@ h1 {
 h2 {
   font-family: "Courier New", Courier, monospace;
   text-align: center;
+  font-weight: bold;
+  font-size: larger;
+  margin-right: -10px;
 }
 h6 {
   text-align: center;
+  color: white;
+}
+#weather-icon {
+  color: rgb(12, 203, 240);
+}
+#dayTime {
+  position: relative;
+  top: -95px;
+  left: 250px;
+  color: rgb(12, 203, 240);
+}
+#bodystyle {
+  background-color: #000000;
+}
+#city {
+  font-weight: bold;
+  font-size: 20px;
+}
+#unit strong {
+  font-size: 80px;
+  font-weight: bolder;
+}
+.degree {
+  position: relative;
+  top: -35px;
+  margin-right: 2px;
 }
 .btn-group {
   font-family: "Courier New", Courier, monospace;
@@ -32,22 +57,22 @@ h6 {
 #info {
   font-family: "Courier New", Courier, monospace;
   font-size: 20px;
+  text-align: center;
+  position: relative;
+  right: -25px;
 }
 .card {
   margin-top: 275px;
 }
 .card-body {
-  background-color: rgb(192, 214, 253);
+  background-color: #f5f7fa;
+  border-radius: 25px;
 }
 .days {
   font-weight: bold;
 }
-#icon {
-  position: relative;
-  right: 20px;
-}
 .low {
   font-style: italic;
   font-weight: normal;
-  color: grey;
+  color: rgb(12, 203, 240);
 }
