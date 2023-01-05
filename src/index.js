@@ -12,9 +12,15 @@ function currentInfo(now) {
   ];
   let day = days[now.getDay()];
   let hour = now.getHours();
-  let min = now.getMinutes();
+  if (hour < 10) {
+    hour = `0${hour}`;
+  }
+  let minutes = now.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
 
-  let formattedDate = `${day} ${hour}:${min}`;
+  let formattedDate = `${day} ${hour}:${minutes}`;
   return formattedDate;
 }
 console.log(currentInfo(currentTime));
