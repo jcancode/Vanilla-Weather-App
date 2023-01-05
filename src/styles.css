@@ -19,7 +19,7 @@ li {
 #weatherDetails {
   position: relative;
   top: -100px;
-  left: 500px;
+  left: 525px;
 }
 #humidity {
   color: aqua;
@@ -32,8 +32,8 @@ li {
   text-transform: capitalize;
 }
 #dayTime {
-  position: static;
-  top: -90px;
+  position: relative;
+  top: -100px;
   left: 250px;
   color: rgb(12, 203, 240);
 }
