@@ -23,7 +23,6 @@ function currentInfo(now) {
   let formattedDate = `${day} ${hour}:${minutes}`;
   return formattedDate;
 }
-console.log(currentInfo(currentTime));
 
 let update = document.querySelector("#dayTime");
 update.innerHTML = currentInfo(currentTime);
