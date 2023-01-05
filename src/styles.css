@@ -13,12 +13,27 @@ h6 {
   text-align: center;
   color: white;
 }
-#weather-icon {
+li {
+  list-style: none;
+}
+#weatherDetails {
+  position: relative;
+  top: -100px;
+  left: 500px;
+}
+#humidity {
+  color: aqua;
+}
+#description {
   color: rgb(12, 203, 240);
+  position: relative;
+  top: -25px;
+  right: 45px;
+  text-transform: capitalize;
 }
 #dayTime {
-  position: relative;
-  top: -95px;
+  position: static;
+  top: -90px;
   left: 250px;
   color: rgb(12, 203, 240);
 }
@@ -29,9 +44,10 @@ h6 {
   font-weight: bold;
   font-size: 20px;
 }
-#unit strong {
+#tempElement strong {
   font-size: 80px;
   font-weight: bolder;
+  color: #000000;
 }
 .degree {
   position: relative;

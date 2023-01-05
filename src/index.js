@@ -35,13 +35,19 @@ function searchCity(event) {
 }
 
 function showTemperature(response) {
+  console.log(response.data);
   let cityTemperature = Math.round(response.data.main.temp);
   console.log(cityTemperature);
-  let currentTemperature = document.querySelector("#unit");
+  let currentTemperature = document.querySelector("#tempElement");
   currentTemperature.innerHTML = `${cityTemperature}°C`;
+  let descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML = response.data.weather[0].main;
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = response.data.main.humidity;
+  let windElement = document.querySelector("#wind");
+  windElement.innerHTML = Math.round(response.data.wind.speed);
   let newCity = document.querySelector("#city");
   newCity.innerHTML = response.data.name;
 }
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", searchCity);
