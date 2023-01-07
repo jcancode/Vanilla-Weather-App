@@ -19,20 +19,25 @@
       <div class="card-body">
         <h1>
           <form id="search-form">
-            <div class="input-group">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Search Location"
-                id="search-input"
-              />
-              <button
-                class="btn btn-outline-info"
-                type="button"
-                id="button-addon2"
-              >
-                🔍 Search
-              </button>
+            <div class="row">
+              <div class="col-10">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="btn btn-outline-info"
+                    placeholder="Search Location"
+                    id="search-input"
+                  />
+                </div>
+                <div class="col-2">
+                  <input
+                    type="submit"
+                    class="btn btn-outline-info"
+                    value="🔍 Search"
+                    id="searchButton"
+                  />
+                </div>
+              </div>
             </div>
           </form>
         </h1>
@@ -52,7 +57,7 @@
               />
             </span>
             <div id="tempElement">
-              <strong>22</strong>
+              <strong id="locationTemp"></strong>
               <span class="degree">°C| <a href="">°F</a></span>
             </div>
             <div id="description">Sunny</div>
