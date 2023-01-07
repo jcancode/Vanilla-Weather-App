@@ -31,8 +31,8 @@ function searchCity(event) {
   event.preventDefault();
   let cityInput = document.querySelector("#search-input");
 
-  let newCity = document.querySelector("#city");
   let cityValue = `${cityInput.value}`;
+  let newCity = document.querySelector("#city");
   newCity.innerHTML = `${cityValue}`;
   let apiKey = "a5b335128fba4eofa060ftf6a9c69bc3";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${cityValue}&key=${apiKey}&units=metric`;
@@ -40,7 +40,6 @@ function searchCity(event) {
 }
 
 function showTemperature(response) {
-  console.log(response.data);
   let cityTemperature = Math.round(response.data.temperature.current);
   console.log(cityTemperature);
   let currentTemperature = document.querySelector("#tempElement");
