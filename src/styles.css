@@ -8,37 +8,39 @@ h2 {
   text-align: center;
   font-weight: bold;
   font-size: larger;
-  margin-right: -10px;
 }
 h6 {
   text-align: center;
   color: white;
 }
+ul {
+  margin: 0;
+  padding: 0;
+  left: -350;
+  top: -350;
+}
 li {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 #icon {
   height: 200px;
   width: 200px;
-  position: relative;
-}
-#weatherDetails {
-  position: relative;
-  top: -155px;
-  left: 560px;
 }
 #humidity {
   color: aqua;
 }
+#wind {
+  color: #0ccbf0;
+}
 #description {
   color: rgb(12, 203, 240);
-  position: relative;
   top: -25px;
   right: 45px;
   text-transform: capitalize;
 }
 #dayTime {
-  position: relative;
   top: -300px;
   left: 275px;
   color: rgb(12, 203, 240);
@@ -54,6 +56,9 @@ li {
   font-size: 80px;
   font-weight: bolder;
   color: #000000;
+}
+.container {
+  padding-top: 100px;
 }
 .degree {
   position: relative;
@@ -73,7 +78,7 @@ li {
   background-color: whitesmoke;
 }
 #button-addon2:hover {
-  color: rgb(3, 60, 109);
+  color: rgb(12, 203, 240);
   opacity: 80;
 }
 #info {
@@ -83,7 +88,7 @@ li {
   position: relative;
   right: -25px;
   top: -75px;
-  bottom: 0px;
+  bottom: -30px;
 }
 .card {
   margin-top: 275px;
