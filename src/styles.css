@@ -16,13 +16,13 @@ h6 {
 ul {
   margin: 0;
   padding: 0;
-  left: -350;
-  top: -350;
 }
 li {
   list-style: none;
   margin: 0;
   padding: 0;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
 }
 #search-input {
   margin-left: 10px;
@@ -35,12 +35,6 @@ li {
 #icon {
   height: 200px;
   width: 200px;
-}
-#humidity {
-  color: aqua;
-}
-#wind {
-  color: #0ccbf0;
 }
 #description {
   color: rgb(12, 203, 240);
@@ -93,10 +87,6 @@ li {
   font-family: "Courier New", Courier, monospace;
   font-size: 20px;
   text-align: center;
-  position: relative;
-  right: -25px;
-  top: -75px;
-  bottom: -30px;
 }
 .card {
   margin-top: 275px;
