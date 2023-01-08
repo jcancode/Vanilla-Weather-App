@@ -17,64 +17,55 @@
   <body id="bodystyle">
     <div class="container">
       <div class="card-body">
-        <h1>
-          <form id="search-form">
-            <div class="row">
-              <div class="col-10">
-                <div class="input-group">
-                  <input
-                    type="text"
-                    class="btn btn-outline-info"
-                    placeholder="Search Location"
-                    id="search-input"
-                  />
-                </div>
-                <div class="col-2">
-                  <input
-                    type="submit"
-                    class="btn btn-outline-info"
-                    value="🔍 Search"
-                    id="searchButton"
-                  />
-                </div>
+        <form id="search-form">
+          <div class="row">
+            <div class="col-10">
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="btn btn-outline-info"
+                  placeholder="Search Location"
+                  id="search-input"
+                />
               </div>
             </div>
-          </form>
-        </h1>
-        <h2>
-          <div>
-            <div>
-              <strong> Current Temperature </strong>
-            </div>
-            <div id="city"></div>
-            <br />
-            <br />
-            <span>
-              <img
-                src="https://cdn4.iconfinder.com/data/icons/the-weather-is-nice-today/64/weather_3-512.png"
-                alt="Sunny"
-                id="icon"
+            <div class="col-2">
+              <input
+                type="submit"
+                class="btn btn-outline-info"
+                value="🔍 Search"
+                id="searchButton"
               />
-            </span>
-            <div id="tempElement">
-              <strong id="locationTemp"></strong>
-              <span class="degree">°C| <a href="">°F</a></span>
             </div>
-            <div id="description">Sunny</div>
-            <div id="dayTime">Friday 3:00pm</div>
           </div>
-        </h2>
-        <br />
-        <div>
-          <span id="weatherDetails">
-            <ul>
-              <li>Humidity: <span id="humidity"></span>%</li>
-              <li>Wind: <span id="wind"></span>Km/H</li>
-            </ul>
-          </span>
+        </form>
+        <div class="text-center">
+          <div>
+            <h2>
+              <strong> Current Temperature </strong>
+            </h2>
+          </div>
+          <div id="city"></div>
+          <br />
+          <br />
+          <img
+            src="https://cdn4.iconfinder.com/data/icons/the-weather-is-nice-today/64/weather_3-512.png"
+            alt="Sunny"
+            id="icon"
+          />
+          <h2 id="tempElement">
+            <strong id="locationTemp"></strong>
+            <span class="degree">°C| <a href="">°F</a></span>
+          </h2>
+          <h2 id="description">Sunny</h2>
+          <h2 id="dayTime">Friday 3:00pm</h2>
+          <ul>
+            <li>Humidity: <span id="humidity"></span>%</li>
+            <li>Wind: <span id="wind"></span>Km/H</li>
+          </ul>
         </div>
-        <div class="row" id="info">
-          <div class="col-2">
+        <div class="row row-cols-5" id="info">
+          <div class="col">
             <span class="days"> Sat </span>
             <br />
             ☁️
@@ -83,7 +74,7 @@
             <br />
             <span class="low">63°F</span>
           </div>
-          <div class="col-2">
+          <div class="col">
             <span class="days">Sun</span>
             <br />
             🌤
@@ -92,7 +83,7 @@
             <br />
             <span class="low">64°F</span>
           </div>
-          <div class="col-2">
+          <div class="col">
             <span class="days">Mon</span>
             <br />
             🌤
@@ -101,7 +92,7 @@
             <br />
             <span class="low">62°F</span>
           </div>
-          <div class="col-2">
+          <div class="col">
             <span class="days">Tues</span>
             <br />
             🌤
@@ -110,7 +101,7 @@
             <br />
             <span class="low">66°F</span>
           </div>
-          <div class="col-2">
+          <div class="col">
             <span class="days">Wed</span>
             <br />
             🌤
