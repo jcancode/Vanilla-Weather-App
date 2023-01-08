@@ -42,8 +42,8 @@ function searchCity(event) {
 function showTemperature(response) {
   let cityTemperature = Math.round(response.data.temperature.current);
   console.log(cityTemperature);
-  let currentTemperature = document.querySelector("#tempElement");
-  currentTemperature.innerHTML = `${cityTemperature}°C`;
+  let currentTemperature = document.querySelector("#locationTemp");
+  currentTemperature.innerHTML = `${cityTemperature}`;
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = response.data.condition.description;
   let humidityElement = document.querySelector("#humidity");
@@ -57,7 +57,7 @@ function showTemperature(response) {
   );
   iconElement.setAttribute("alt", response.data.condition.description);
   let newCity = document.querySelector("#city");
-  newCity.innerHTML = response.data.name;
+  newCity.innerHTML = response.data.city;
 }
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", searchCity);
