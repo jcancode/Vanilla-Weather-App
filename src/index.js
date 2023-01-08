@@ -58,6 +58,38 @@ function showTemperature(response) {
   iconElement.setAttribute("alt", response.data.condition.description);
   let newCity = document.querySelector("#city");
   newCity.innerHTML = response.data.city;
+
+  celciusTemperature = response.data.temperature.current;
 }
+
+function showFahrenheitTemperature(event) {
+  event.preventDefault();
+  let cityTemperature = document.querySelector("#locationTemp");
+
+  celciusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+
+  let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
+  cityTemperature.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function showCelciusTemperature(event) {
+  event.preventDefault();
+  celciusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let cityTemperature = document.querySelector("#locationTemp");
+  cityTemperature.innerHTML = Math.round(celciusTemperature);
+}
+
+let celciusTemperature = null;
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", searchCity);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
+
+let celciusLink = document.querySelector("#celcius-link");
+celciusLink.addEventListener("click", showCelciusTemperature);
+
+search("Atlanta");

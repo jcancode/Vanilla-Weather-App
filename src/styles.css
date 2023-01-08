@@ -29,7 +29,7 @@ li {
   margin-top: 10px;
 }
 #searchButton {
-  margin-left: 10px;
+  margin-left: -50px;
   margin-top: 10px;
 }
 #icon {
@@ -59,8 +59,26 @@ li {
   font-weight: bolder;
   color: #000000;
 }
+#celcius-link {
+  text-decoration: none;
+}
+#fahrenheit-link {
+  text-decoration: none;
+}
 .container {
   padding-top: 100px;
+}
+.card-body {
+  background-color: #f5f7fa;
+  border-radius: 25px;
+}
+.active {
+  color: #000000;
+  cursor: default;
+  text-decoration: none;
+}
+.active:hover {
+  text-decoration: none;
 }
 .degree {
   position: relative;
@@ -75,6 +93,7 @@ li {
   font-size: 18px;
   font-weight: normal;
 }
+
 #button-addon2 {
   color: grey;
   background-color: whitesmoke;
@@ -90,10 +109,6 @@ li {
 }
 .card {
   margin-top: 275px;
-}
-.card-body {
-  background-color: #f5f7fa;
-  border-radius: 25px;
 }
 .days {
   font-weight: bold;
