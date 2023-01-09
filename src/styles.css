@@ -109,6 +109,7 @@ li {
 }
 .card {
   margin-top: 275px;
+  box-shadow: rgb(12, 203, 240);
 }
 .days {
   font-weight: bold;
