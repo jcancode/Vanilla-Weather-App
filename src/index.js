@@ -39,6 +39,31 @@ function searchCity(event) {
   axios.get(`${apiUrl}&apiid=${apiKey}`).then(showTemperature);
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row" id="info">`;
+  let daysForecast = ["Thur", "Fri", "Sat", "Sun", "Mon"];
+  daysForecast.forEach(function (daily) {
+    forecastHTML =
+      forecastHTML +
+      `
+    <div class="col-2">
+      <span class="days"> ${daily}</span>
+      <br />
+      ☁️
+      <br />
+      77°F
+      <br />
+      <span class="low">63°F</span>
+    </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function showTemperature(response) {
   let cityTemperature = Math.round(response.data.temperature.current);
   console.log(cityTemperature);
@@ -92,4 +117,5 @@ fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
 let celciusLink = document.querySelector("#celcius-link");
 celciusLink.addEventListener("click", showCelciusTemperature);
 
-search("Atlanta");
+displayForecast();
+searchCity("Atlanta");
