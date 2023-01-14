@@ -64,7 +64,24 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHTML;
 }
 
+function getForecast(forecast) {
+  console.log(forecast);
+  let apiKey = "a5b335128fba4eofa060ftf6a9c69bc3";
+  let apiForecastUrl = `https://api.shecodes.io/weather/v1/forecast?query=Atlanta&key=${apiKey}`;
+  console.log(apiForecastUrl);
+  axios.get(apiForecastUrl).then(getForecast);
+  getDailyForecast(forecast.daily);
+}
+function getCoordinates(coordinates) {
+  console.log(coordinates);
+  let apiKey = "a5b335128fba4eofa060ftf6a9c69bc3";
+  let apiCorrdUrl = `https://api.shecodes.io/weather/v1/current?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&units=metric`;
+  console.log(apiCorrdUrl);
+  axios.get(apiCorrdUrl).then(getCoordinates);
+}
+
 function showTemperature(response) {
+  console.log(response);
   let cityTemperature = Math.round(response.data.temperature.current);
   console.log(cityTemperature);
   let currentTemperature = document.querySelector("#locationTemp");
@@ -85,6 +102,8 @@ function showTemperature(response) {
   newCity.innerHTML = response.data.city;
 
   celciusTemperature = response.data.temperature.current;
+
+  getCoordinates(response.data.coordinates);
 }
 
 function showFahrenheitTemperature(event) {
