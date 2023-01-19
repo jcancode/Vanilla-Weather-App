@@ -38,7 +38,7 @@ function handleSubmit(event) {
 
 function searchCity(city) {
   let apiKey = "bd79ao40tde3dec118ca46bc3e6dd55f";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
   console.log(apiUrl);
   axios.get(`${apiUrl}&apiid=${apiKey}`).then(showTemperature);
 }
@@ -89,7 +89,7 @@ function displayForecast(response) {
 function getForecast(forecast) {
   console.log(forecast);
   let apiKey = "a5b335128fba4eofa060ftf6a9c69bc3";
-  let apiForecastUrl = `https://api.shecodes.io/weather/v1/forecast?query=Atlanta&key=${apiKey}`;
+  let apiForecastUrl = `https://api.shecodes.io/weather/v1/forecast?query=Atlanta&key=${apiKey}&units=imperial`;
   console.log(apiForecastUrl);
   axios.get(apiForecastUrl).then(getForecast);
   getDailyForecast(forecast.daily);
@@ -97,7 +97,7 @@ function getForecast(forecast) {
 function getCoordinates(coordinates) {
   console.log(coordinates);
   let apiKey = "bd79ao40tde3dec118ca46bc3e6dd55f";
-  let apiCorrdUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}`;
+  let apiCorrdUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&units=imperial`;
   console.log(apiCorrdUrl);
   axios.get(apiCorrdUrl).then(displayForecast);
 }
@@ -123,7 +123,7 @@ function showTemperature(response) {
   let newCity = document.querySelector("#city");
   newCity.innerHTML = response.data.city;
 
-  celciusTemperature = response.data.temperature.current;
+  showFahrenheitTemperature = response.data.temperature.current;
 
   getCoordinates(response.data.coordinates);
 }
@@ -132,31 +132,12 @@ function showFahrenheitTemperature(event) {
   event.preventDefault();
   let cityTemperature = document.querySelector("#locationTemp");
 
-  celciusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-
-  let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
+  let fahrenheitTemperature = (showTemperature * 9) / 5 + 32;
   cityTemperature.innerHTML = Math.round(fahrenheitTemperature);
 }
 
-function showCelciusTemperature(event) {
-  event.preventDefault();
-  celciusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  let cityTemperature = document.querySelector("#locationTemp");
-  cityTemperature.innerHTML = Math.round(celciusTemperature);
-}
-
-let celciusTemperature = null;
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
-
-let celciusLink = document.querySelector("#celcius-link");
-celciusLink.addEventListener("click", showCelciusTemperature);
 
 // displayForecast();
 searchCity("Atlanta");
