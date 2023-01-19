@@ -52,16 +52,14 @@ li {
 }
 #city {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 60px;
 }
 #tempElement strong {
   font-size: 80px;
   font-weight: bolder;
   color: #000000;
 }
-#-link {
-  text-decoration: none;
-}
+
 .container {
   padding-top: 100px;
 }
@@ -90,7 +88,9 @@ li {
   font-size: 18px;
   font-weight: normal;
 }
-
+.forecast {
+  right: -10px;
+}
 #button-addon2 {
   color: grey;
   background-color: whitesmoke;
@@ -99,20 +99,8 @@ li {
   color: rgb(12, 203, 240);
   opacity: 80;
 }
-#info {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 20px;
-  text-align: center;
-}
+
 .card {
   margin-top: 275px;
   box-shadow: 15px 10px 10px rgb(12, 203, 240);
-}
-.days {
-  font-weight: bold;
-}
-.low {
-  font-style: italic;
-  font-weight: normal;
-  color: rgb(12, 203, 240);
 }
