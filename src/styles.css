@@ -59,10 +59,7 @@ li {
   font-weight: bolder;
   color: #000000;
 }
-#celcius-link {
-  text-decoration: none;
-}
-#fahrenheit-link {
+#-link {
   text-decoration: none;
 }
 .container {
